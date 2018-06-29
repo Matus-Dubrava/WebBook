@@ -1,0 +1,20 @@
+<% include _header %>
+
+<% if (posts) { %>
+  <% posts.forEach(post => { %>
+    <div class="card">
+      <div class="card-header">
+        <p><%= post.title %><p>
+        <p><%= post.date %><p>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><%= post.content %></p>
+        <p class="card-text">
+          <a href="/posts/<%= post.title %>">view more</a>
+        </p>
+      </div>
+    </div>
+  <% }) %>
+<% } %>
+
+<% include _footer %>
