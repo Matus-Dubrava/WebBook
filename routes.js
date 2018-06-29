@@ -15,6 +15,7 @@ router.get('/posts', (req, res) => {
       const postsShorterText = posts.map(post => {
         return {
           title: post.title,
+          description: post.description,
           date: post.date,
           content: post.content.length > 200
             ? post.content.slice(0, 200) + '...'
@@ -34,6 +35,7 @@ router.post('/add-post', (req, res) => {
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
+    description: req.body.description,
     date: utils.getCurrentFormattedDate()
   });
 
@@ -69,6 +71,7 @@ router.post('/posts/edit/:title', (req, res, next) => {
     .then(post => {
       post.title = req.body.title;
       post.content = req.body.content;
+      post.description = req.body.description;
 
       post.save();
       res.redirect(`/posts/${post.title}`);

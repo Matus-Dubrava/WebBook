@@ -1,9 +1,11 @@
 <% include _header %>
 
-<p><a href="/posts/edit/<%= post.title %>">edit</a></p>
-<a class="postDeleteBtn" href="/posts/delete/<%= post.title %>">delete</a>
 <h1><%= post.title %></h1>
 <p><%= post.date %></p>
-<p><%= post.content %></p>
+<p><%= post.description %></p>
+<p><%- post.content %></p>
+
+<a class="btn btn-primary" href="/posts/edit/<%= post.title %>">edit</a>
+<a class="postDeleteBtn btn btn-primary" href="/posts/delete/<%= post.title %>">delete</a>
 
 <% include _footer %>

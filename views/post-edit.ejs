@@ -8,6 +8,10 @@
       value="<%= post.title %>" required autofocus>
   </div>
   <div class="form-group">
+    <textarea class="form-control" name="description" placeholder="post body"
+      required><%= post.description %></textarea>
+  </div>
+  <div class="form-group">
     <textarea class="form-control" name="content" placeholder="post body"
       required><%= post.content %></textarea>
   </div>

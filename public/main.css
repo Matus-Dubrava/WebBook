@@ -1,6 +1,28 @@
+* {
+  /* font-family: 'Spectral', serif; */
+}
+
 .card {
   margin-top: 20px;
   margin-left: 20px;
   width: 40%;
   float: left;
+}
+
+.command {
+  width: 90%;
+  margin: 20px auto;
+  background: #eee;
+  border-left: 4px solid black;
+  padding: 20px;
+  font-family: 'Fira Mono', monospace;
+}
+
+pre {
+  width: 90%;
+  margin: 20px auto;
+}
+
+code {
+  padding: 20px;
 }
